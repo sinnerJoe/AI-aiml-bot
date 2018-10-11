@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	<!-- insert your AIML categories here -->
+	<category>
+        <pattern>My highest mark was *</pattern>
+        <template><set name="highestmark"><star/></set> is a good mark. Anything else?</template>
+    </category>
+    
+    <category>
+        <pattern>What was my highest mark</pattern>
+        <template>
+            <condition name="highestmark">
+				<li value="*">It was <get name="highestmark"/>.</li>
+				<li>I don't remember you telling me that.</li>
+			</condition>
+		</template>
+    </category>
+    
+    
+    <category>
+        <pattern>I am doing my degree project with *</pattern>
+        <template>Good luck! I'm sure <set name="prof"><star/></set> will give you good advice.</template>
+    </category>
+    
+    <category>
+        <pattern>Who helps me with the project</pattern>
+        <template>
+            <condition name="prof">
+				<li value="*">You said that <get name="prof"/> will help you doing the project.</li>
+				<li>I don't know. Can you tell me?</li>
+			</condition>
+		</template>
+    </category>
+    
+    
+    <category>
+        <pattern>I was an integralist for * semesters</pattern>
+        <template>That means you worked pretty hard during those <set name="integralist"><star/></set> semesters.</template>
+    </category>
+    
+    <category>
+        <pattern>How much time have I been an integralist</pattern>
+        <template>
+            <condition name="integralist">
+				<li value="*"><get name="integralist"/> semesters.</li>
+				<li>I have no clue. Do you want to tell me?</li>
+			</condition>
+		</template>
+    </category>
+</aiml>
