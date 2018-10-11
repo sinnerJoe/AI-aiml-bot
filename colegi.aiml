@@ -66,6 +66,30 @@
         </template>
     </category>
     
+    
+     <category>
+        <pattern>
+            Who was favourite classmate?
+        </pattern>
+        <template>
+            <condition name="coleg">
+                <li value="*">
+                    That's <get name="coleg"/>
+                </li>
+                <li>
+                    <random>
+                        <li>I don't know</li>
+                        <li>You didn't tell me</li>
+                        <li>I'm not a filthy stalker, how do I know?</li>
+                    </random>
+                
+                </li>
+            </condition>
+        </template>    
+    </category>
+    
+    
+    
     <category>
         <pattern>
             *        
@@ -76,4 +100,6 @@
         </template>
     </category>
     
+    
+   
 </aiml>

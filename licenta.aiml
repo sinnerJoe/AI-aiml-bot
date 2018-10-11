@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	<category>
+	        <pattern>I am interested in _</pattern>
+	        <set name="interest"><star/></set>
+	        <template>
+	            What do you think about choosing <star/> for 
+	            license?
+	        </template>
+	        
+	</category>
+	
+	<category>
+	    <pattern>
+	        <set>yes</set>
+	    </pattern>
+	    <that>WHAT DO YOU THINK ABOUT CHOOSING * FOR 
+	            LICENSE</that>
+	   <template>
+	      Ask for more, I'm open to helping people
+	   </template>
+	</category>
+	
+	<category>
+	    <pattern>
+	        What am I interested in?
+	    </pattern>
+	    <template>
+	        <condition name="interest">
+	            <li value="*">
+	                <get name="interest"/>
+	            </li>
+	            <li>
+	                I don't know. Can you tell me?
+	            </li>
+	        </condition>
+	    </template>
+	</category>
+</aiml>
