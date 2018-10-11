@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	<!-- insert your AIML categories here -->
+	<category>
+        <pattern>My name is *</pattern>
+        <template>Nice to meet you, <set name="name"><star/></set>. Would you like to tell me more about yourself?</template>
+    </category>
+    
+    <category>
+        <pattern>Do you know my name</pattern>
+        <template>Of course, your name is <get name="name"/>.</template>
+    </category>
+    
+    <category>
+        <pattern>Who am I</pattern>
+        <template>You are <get name="name"/>.</template>
+    </category>
+</aiml>

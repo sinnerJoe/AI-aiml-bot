@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+    
+    <category>
+		<pattern>Hi ^</pattern>
+		<template>
+			<condition name="_name">
+				<li value="*">Hi, <get name="_name"/>!</li>
+				<li>Hi! What is your name?</li>
+			</condition>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>Hello ^</pattern>
+		<template>
+			<condition name="_name">
+				<li value="*">Hello, <get name="_name"/>!</li>
+				<li>Hi! What is your name?</li>
+			</condition>
+		</template>
+	</category>
+	
+	<category>
+	    <pattern>Bye ^</pattern>
+	    <template>
+			<condition name="_name">
+				<li value="*">Good bye, <get name="_name"/>!</li>
+				<li>Bye!</li>
+			</condition>
+		</template>
+	</category>
+	
+	<category>
+	    <pattern>How are you today</pattern>
+	    <template>Great!</template>
+	</category>
+	
+	
+</aiml>
