@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+    
+    
+    <category>
+
+        <pattern>
+            I like my classmate _
+        </pattern>
+        
+        <set name="topic">classmate</set>
+        
+        <template>What do you like about <set name="coleg"><star index="1"/>?</set></template>
+    </category>
+
+    <category>
+
+
+        <pattern>he _</pattern>
+        <that>WHAT DO YOU LIKE ABOUT _</that>
+        <template>
+        <random>
+            <li>Oh, I see</li>
+            <li>Cool</li>
+            <li>I would be happy to have such a great classmate</li>
+            <li>I bet <get name="coleg"/> is awesome</li>
+        </random>
+        </template>
+    </category>
+
+    <category>
+        <pattern>she _</pattern>
+        <that>WHAT DO YOU LIKE ABOUT _</that>
+        <template><srai><star index="1"/> He is <star index="1"/></srai></template>
+    </category>
+
+    <category>
+        <pattern>
+            Who _ favourite classmate?
+        </pattern>
+        
+        <template> Your favourite classmate is <get name="coleg"/></template>
+    </category>
+    
+    <category>
+        <pattern>I am close with _</pattern>
+        <template>
+            <srai>I like my classmate <star/></srai>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>We have the same optionals</pattern>
+        <set name="optional">together</set>
+        <template>
+            <condition name="coleg">
+                <li value="*">
+                    <random>
+                        <li>It should me more interesting together</li>
+                        <li>I see you two are having a nice time</li>
+                        <li>Be careful not to fall in love lol  :D </li>
+                    </random>
+                </li>
+                <li>With whom?</li>
+            </condition>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>
+            *        
+        </pattern>
+        <that>WITH WHOM</that>
+        <template>
+            <srai>I like my classmate <star/></srai>
+        </template>
+    </category>
+    
+</aiml>
