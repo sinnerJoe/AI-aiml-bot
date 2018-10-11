@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+    <category>
+        <pattern>
+            Yes
+        </pattern>
+        <that>IS IT A JOKE</that>
+        <template> You're a funny guy, aren't you</template>
+    </category>
+	<category>
+        
+        <pattern>
+            *
+        </pattern>
+        <template>
+            <random>
+                <li>I don't get what you want to say </li>
+                <li> Say it with other words </li>
+                <li> I don't get it </li>
+                <li> What? </li>
+                <li> Sorry, can you explain? </li>
+                <li> Explain yourself, please </li>
+                <li> Is it a joke? </li>
+                <li> Sorry, mate </li>
+                <li> I cease to understand you </li>
+                <li> What do you mean by '<star/>'</li>
+            </random>
+        </template>
+    </category>
+    
+</aiml>
